@@ -4,12 +4,14 @@ roll = random.randint(1,3)
 
 print("computer rolled number " + str(roll))
 
-if roll == 1:
-    computer_choice = 'scissors'
-elif roll == 2:
-    computer_choice = 'paper'
-else:
-    computer_choice = 'rock'
+# if roll == 1:
+#     computer_choice = 'scissors'
+# elif roll == 2:
+#     computer_choice = 'paper'
+# else:
+#     computer_choice = 'rock'
+
+computer_choice = random.choice(["rock","paper","scissors"])
 
 user_choice = input("Do you want - rock, paper, or scissors?\n")
 
