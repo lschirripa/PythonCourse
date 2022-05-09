@@ -16,6 +16,6 @@ p = '../python4begginers'
 
 try:
     process_file(p)
-except OSError as e:
+except OSError as e:           #with OSError we cath al manner of conditions such as file not found
     print(f'error: {e}')
 
