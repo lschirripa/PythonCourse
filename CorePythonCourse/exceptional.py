@@ -1,4 +1,6 @@
 import importlib
+import sys
+from math import log
 
 DIGIT_MAP = {
             'zero' : '0',
@@ -25,6 +27,15 @@ def convert(user_string):
         print(f"conversion succeeded! x = {x}")
         return x
 
-    except (KeyError,TypeError, ValueError):
-        print("invalid string!")
+    except (KeyError,TypeError, ValueError) as e:
+        print(f"conversion failed: {e!r}", file=sys.stderr)
+        raise
 
+def string_log(s):
+    s = convert(s)
+    return log(s)
+
+def main():
+    print(string_log(sys.argv[1]))
+
+main()
