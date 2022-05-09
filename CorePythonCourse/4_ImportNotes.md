@@ -8,6 +8,7 @@ from REPL:
 
 # from testImport import * -> to import the complete file
 
+# to RELOAD the file imported -> import importlib -> then in the repl do: importlib.reload(MODULE_NAME) -> then if you are using a function from that module, do again "from MODULE_NAME import FUNCTION_NAME"
 
 ## DOCSTRING ##
 
@@ -19,3 +20,4 @@ from REPL:
 # shebang -> #! usr/bin/env python3  #this is to specifiy the py interpreter i gonna use 
 
 # executable -> chmod +x weatherAPI.py (se corre con ./weatherAPI.py)BEFORE THE SHEBANG . no se si el chmod es en la terminal o en el modulo de python
+
