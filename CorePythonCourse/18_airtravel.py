@@ -1,8 +1,8 @@
-"""model for aircraft flights"""
+"""model for aircraft flights with food"""
 
 class Flight:
 
-    def __init__(self, number):
+    def __init__(self, number, food):
         
         if not number[:2].isalpha():
             raise ValueError(f"No airline code in '{number}'")
@@ -15,6 +15,7 @@ class Flight:
    
         #print(number[:])
         self._number = number
+        self._food = food
 
     def number(self):
         return self._number
@@ -22,7 +23,26 @@ class Flight:
     def airlane(self):
         return self._number[:2]
 
+    def airplaneFoodName(self):
+        return self._food.name()
 
-f = Flight("SN090")
-print(f.number())
+
+class Food:
+
+    def __init__(self, name, calories, tastyLevel):
+        self._name = name
+        self.calores = calories
+        self._tastyLevel = tastyLevel
+
+    def name(self):
+        return self._name
+    
+    def calories(self):
+        return self._calories
+
+
+f = Flight("SN090", Food("banana", 500, 5))
+print(f.airplaneFoodName())
+
+
 
