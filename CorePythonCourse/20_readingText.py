@@ -21,3 +21,15 @@ print(g.readline())
 
 print(g.readline())
 print(g.readline())
+
+#now lets do readlines() -> bring me all in a list
+
+for i in range(20):
+    print('---',end="")
+
+print("\n")
+
+
+g.seek(0)
+
+print(g.readlines())
