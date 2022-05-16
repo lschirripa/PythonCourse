@@ -10,3 +10,6 @@ f.close()
 
 with open("test.txt", mode = "wt", encoding = 'utf-8') as f:
     f.writelines("this block allows me to forget closing")
+
+
+# i could also use a try-finally block where in the finally block i can close the resources even though there is an error or an exception
