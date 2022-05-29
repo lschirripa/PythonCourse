@@ -1,0 +1,8 @@
+activate venv:
+venv/scripts/activate    (in terminal)
+
+rollback pip to previous version:
+python -m ensurepip --default-pip
+
+if WARNING: Ignoring invalid distribution
+    delete all folders starting with ~  (means they are duplicated)
