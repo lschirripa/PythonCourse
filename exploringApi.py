@@ -3,5 +3,13 @@ import credentials
 
 client = Client(credentials.SID,credentials.token)
 
-for msg in client.messages.list():
-    print(msg.body)
+# for msg in client.messages.list():
+#     print(msg.body)
+
+msg = client.messages.create(
+    from_= credentials.hidden_from,
+    to = credentials.hidden_to,
+    body= 'Hi there, sent from python!'
+)
+
+print(f"Created a new message: {msg.sid}")
